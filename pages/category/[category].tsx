@@ -13,7 +13,7 @@ function Category({ posts }: any) {
             <NextSeo title={`Category - ${params.query.category?.toString()} | Daily`} description='Get news ranging from different topics like, technology, design, hacks, business and more' canonical={`https://dailyposts.vercel.app/category/${params.query.category?.toString()}`} additionalMetaTags={[
                 { name: "keywords", content: `${params.query.category?.toString()}, news, blog, post, daily post, daily news, daily, strike, nigeria news, news website` }
             ]} />
-            <div className='relative px-10 py-5'>
+            <div className='relative md:px-10 p-5'>
                 <p className='text-xs font-medium capitalize'>Category &gt; {params.query.category}</p>
                 <div className='mt-5'>
                     {posts.length > 0 ? <div className="grid w-full min-h-screen grid-cols-1 gap-10 mb-28 sm:grid-cols-2 lg:grid-cols-3 place-items-start">
