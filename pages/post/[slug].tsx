@@ -64,10 +64,10 @@ function Single({ post, categories }: Props) {
     })()
     return (
         <div>
-            <NextSeo title={post.title} description={post.description} canonical={``} openGraph={{
+            <NextSeo title={post.title} description={post.description} canonical={`https://dailyposts.vercel.app/post/${post.slug.current}`} openGraph={{
                 title: post.title,
                 description: post.description,
-                url: `post/${post.slug.current}`,
+                url: `https://dailyposts.vercel.app/post/${post.slug.current}`,
                 type: 'article',
                 article: {
                     publishedTime: post._createdAt,

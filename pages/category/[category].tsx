@@ -10,7 +10,7 @@ function Category({ posts }: any) {
     //console.log(posts)
     return (
         <div className='relative'>
-            <NextSeo title={`Category - ${params.query.category?.toString()} | Daily`} description='Get news ranging from different topics like, technology, design, hacks, business and more' canonical={`category/${params.query.category?.toString()}`} additionalMetaTags={[
+            <NextSeo title={`Category - ${params.query.category?.toString()} | Daily`} description='Get news ranging from different topics like, technology, design, hacks, business and more' canonical={`https://dailyposts.vercel.app/category/${params.query.category?.toString()}`} additionalMetaTags={[
                 { name: "keywords", content: `${params.query.category?.toString()}, news, blog, post, daily post, daily news, daily, strike, nigeria news, news website` }
             ]} />
             <div className='relative px-10 py-5'>

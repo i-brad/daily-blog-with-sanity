@@ -5,7 +5,7 @@ import { sanityClient } from '../../sanity'
 function Search({ posts, term }: any) {
     return (
         <div>
-            <NextSeo title='Searching through Daily' canonical={`search/${term}`} additionalMetaTags={[
+            <NextSeo title='Searching through Daily' canonical={`https://dailyposts.vercel.app/search/${term}`} additionalMetaTags={[
                 { name: "keywords", content: `${term}, news, blog, post, daily post, daily news, daily, strike, nigeria news, news website` }
             ]} />
             <div className="p-5 md:px-10">
