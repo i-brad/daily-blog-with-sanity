@@ -16,7 +16,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="msapplication-TileColor" content="#da532c" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
-      <DefaultSeo title='Daily' description='Get news ranging from different topics like, technology, design, hacks, business and more' canonical='https://dailyposts.vercel.app/' openGraph={{
+      <DefaultSeo title='Daily - News, tips, updates and more' description='Get news ranging from different topics like, technology, design, hacks, business and more' canonical='https://dailyposts.vercel.app/' openGraph={{
         type: 'website',
         site_name: 'Daily',
         url: "https://dailyposts.vercel.app/",

@@ -17,7 +17,6 @@ interface Props {
 }
 
 const Home = ({ posts, trends, categories }: Props) => {
-
   return (
     <div className="relative max-w-7xl w-full">
       <div className='relative flex flex-col-reverse px-5 md:px-10 mt-5 lg:space-x-10 lg:flex-row w-full'>
@@ -28,7 +27,7 @@ const Home = ({ posts, trends, categories }: Props) => {
         </div>
         <div className='relative top-0 w-full md:max-w-sm min-h-fit lg:mb-40 mb-10 space-y-5'>
           {trends.length > 0 && <div>
-            <h1 className='pb-2 text-sm font-medium uppercase border-b-2 border-primary'>Trending Posts</h1>
+            <h2 className='pb-2 text-sm font-medium uppercase border-b-2 border-primary'>Trending Posts</h2>
             <div className='pt-3 mb-10 space-y-4'>
               {trends.map((post) => {
                 return <Trend key={post._id} data={post} />
@@ -36,7 +35,7 @@ const Home = ({ posts, trends, categories }: Props) => {
             </div>
           </div>}
           <div className='sticky w-full top-24 h-fit'>
-            <h1 className='pb-2 text-sm font-medium uppercase border-b-2 border-primary'>Discover interesting topics</h1>
+            <h2 className='pb-2 text-sm font-medium uppercase border-b-2 border-primary'>Discover interesting topics</h2>
             <div className='pt-3 space-x-2 space-y-2'>
               {categories.map((cat) => {
                 return <Link href={`/category/${cat.title.toLowerCase()}`} passHref key={cat._id}>

@@ -119,7 +119,7 @@ function Single({ post, categories }: Props) {
                                 }} className="portable-text" />
                             </article>
                             <div>
-                                <h1 className='pb-2 mb-3 text-sm font-medium uppercase border-b-2 border-primary'>Comments</h1>
+                                <h3 className='pb-2 mb-3 text-sm font-medium uppercase border-b-2 border-primary'>Comments</h3>
                                 {post.comments.length === 0 && <p className="my-3 text-sm opacity-80">Be the first to leave a comment.</p>}
                                 <ol className="pl-4 space-y-3 list-decimal">
                                     {post.comments.map((comment) => {
@@ -133,10 +133,10 @@ function Single({ post, categories }: Props) {
                                 </ol>
                             </div>
                             {submitted ? <div className="w-full bg-primary text-white p-3">
-                                <h1 className="my-1 font-medium text-base">Thanks for leaving a comment.</h1>
+                                <h3 className="my-1 font-medium text-base">Thanks for leaving a comment.</h3>
                                 <p className="text-xs">Comment will show up once it has been approved.</p>
                             </div> : <form className="max-w-lg mt-5" onSubmit={handleSubmit(onSubmit)}>
-                                <h1 className='pb-2 mb-3 text-sm font-medium uppercase border-b-2 border-primary'>Enjoyed the Article? Leave a comment</h1>
+                                <h4 className='pb-2 mb-3 text-sm font-medium uppercase border-b-2 border-primary'>Enjoyed the Article? Leave a comment</h4>
                                 <input type="hidden" {...register("_id")} value={post._id} name="_id" />
                                 <label htmlFor="name" className="block w-full">
                                     <span className="text-sm">Name</span>
@@ -158,7 +158,7 @@ function Single({ post, categories }: Props) {
                         </div>
                         <div className="lg:sticky lg:top-20 w-full h-fit block max-w-md">
                             <div>
-                                <h1 className='pb-2 text-sm font-medium uppercase border-b-2 border-primary'>Discover more interesting topics</h1>
+                                <h2 className='pb-2 text-sm font-medium uppercase border-b-2 border-primary'>Discover more interesting topics</h2>
                                 <div className='pt-3 space-x-2 space-y-2'>
                                     {categories.map((cat: any) => {
                                         return <Link href={`/category/${cat.title.toLowerCase()}`} passHref key={cat._id}>
