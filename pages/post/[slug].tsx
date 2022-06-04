@@ -91,11 +91,11 @@ function Single({ post, categories }: Props) {
                 <img src={urlFor(post.mainImage).url()} alt="default" className="object-cover w-full max-h-40" />
                 <div className="w-full min-h-screen px-5 mt-5 bg-gray-50 md:px-10">
                     <div className="relative flex flex-col items-start justify-between pb-20 space-y-10 lg:space-x-14 lg:flex-row lg:space-y-0">
-                        <div className="max-w-3xl w-full mx-auto space-y-8">
+                        <div className="w-full max-w-3xl mx-auto space-y-8">
                             <article className="w-full">
                                 <h1 className="mb-5 text-2xl font-medium">{post.title}</h1>
-                                <div className="flex justify-between items-center my-5">
-                                    <div className="flex items-start justify-start  space-x-3">
+                                <div className="flex items-center justify-between my-5">
+                                    <div className="flex items-start justify-start space-x-3">
                                         <img src={urlFor(post.author.image).url()} alt="author" className="object-cover w-10 h-10 rounded-full" />
                                         <span>
                                             <h2 className="font-medium opacity-90">{post.author.name}</h2>
@@ -114,7 +114,7 @@ function Single({ post, categories }: Props) {
                                         return <p className="my-7">{children}</p>
                                     },
                                     link: ({ href, children }: any) => {
-                                        return <a href={href} className="text-primary underline">{children}</a>
+                                        return <a href={href} className="underline text-primary">{children}</a>
                                     }
                                 }} className="portable-text" />
                             </article>
@@ -132,8 +132,8 @@ function Single({ post, categories }: Props) {
 
                                 </ol>
                             </div>
-                            {submitted ? <div className="w-full bg-primary text-white p-3">
-                                <h3 className="my-1 font-medium text-base">Thanks for leaving a comment.</h3>
+                            {submitted ? <div className="w-full p-3 text-white bg-primary">
+                                <h3 className="my-1 text-base font-medium">Thanks for leaving a comment.</h3>
                                 <p className="text-xs">Comment will show up once it has been approved.</p>
                             </div> : <form className="max-w-lg mt-5" onSubmit={handleSubmit(onSubmit)}>
                                 <h4 className='pb-2 mb-3 text-sm font-medium uppercase border-b-2 border-primary'>Enjoyed the Article? Leave a comment</h4>
@@ -141,22 +141,22 @@ function Single({ post, categories }: Props) {
                                 <label htmlFor="name" className="block w-full">
                                     <span className="text-sm">Name</span>
                                     <input {...register("name", { required: true })} className="block w-full px-3 py-2 mt-2 mb-3 bg-gray-200 rounded-md outline-none" type="text" name="name" id="name" placeholder="commenter's name" />
-                                    {errors.name && <p className="text-red-500 text-xs -mt-2 mb-3">This field is required</p>}
+                                    {errors.name && <p className="mb-3 -mt-2 text-xs text-red-500">This field is required</p>}
                                 </label>
                                 <label htmlFor="email" className="block w-full">
                                     <span className="text-sm">Email Address</span>
                                     <input {...register("email", { required: true })} className="block w-full px-3 py-2 mt-2 mb-3 bg-gray-200 rounded-md outline-none" type="email" name="email" id="email" placeholder="example@gmail.com" />
-                                    {errors.email && <p className="text-red-500 text-xs -mt-2 mb-3">This field is required and must be valid</p>}
+                                    {errors.email && <p className="mb-3 -mt-2 text-xs text-red-500">This field is required and must be valid</p>}
                                 </label>
                                 <label htmlFor="comment" className="block w-full">
                                     <span className="text-sm">Comment</span>
                                     <textarea {...register("comment", { required: true })} name="comment" id="comment" rows={8} className="block w-full px-3 py-2 mt-2 mb-3 bg-gray-200 rounded-md outline-none"></textarea>
-                                    {errors.comment && <p className="text-red-500 text-xs -mt-2 mb-3">This field is required</p>}
+                                    {errors.comment && <p className="mb-3 -mt-2 text-xs text-red-500">This field is required</p>}
                                 </label>
-                                <button type="submit" className="px-5 py-2 mt-5 text-white text-sm transition-opacity duration-300 ease-in-out rounded h-fit bg-primary w-fit hover:bg-primary/90" disabled={submitting} style={{ opacity: submitting ? ".5" : "1" }}>{submitting ? "Sending" : "Comment"}</button>
+                                <button type="submit" className="px-5 py-2 mt-5 text-sm text-white transition-opacity duration-300 ease-in-out rounded h-fit bg-primary w-fit hover:bg-primary/90" disabled={submitting} style={{ opacity: submitting ? ".5" : "1" }}>{submitting ? "Sending" : "Comment"}</button>
                             </form>}
                         </div>
-                        <div className="lg:sticky lg:top-20 w-full h-fit block max-w-md">
+                        <div className="block w-full max-w-md lg:sticky lg:top-20 h-fit">
                             <div>
                                 <h2 className='pb-2 text-sm font-medium uppercase border-b-2 border-primary'>Discover more interesting topics</h2>
                                 <div className='pt-3 space-x-2 space-y-2'>

@@ -28,7 +28,7 @@ function Card({ data }: any) {
             <p className='text-xs font-medium opacity-70'>Created on {new Date(data._createdAt).toLocaleString()}</p>
             <div className='flex items-center justify-between mt-2'>
                 <Link href={`/post/${data.slug.current}`} passHref>
-                    <a className='text-xs font-medium duration-300 opacity-70 hover:opacity-100 underline'>Read</a>
+                    <a className='text-xs font-medium underline duration-300 opacity-70 hover:opacity-100'>Read</a>
                 </Link>
                 <span className='flex items-center justify-between space-x-2'>
                     <FavoriteBorderOutlined sx={{
