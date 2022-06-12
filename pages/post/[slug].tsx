@@ -81,8 +81,6 @@ function Single({ post, categories }: Props) {
                 images: [
                     {
                         url: urlFor(post.mainImage).url(),
-                        width: 850,
-                        height: 650,
                         alt: post.title,
                     },
                 ],
