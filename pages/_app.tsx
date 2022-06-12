@@ -25,8 +25,6 @@ function MyApp({ Component, pageProps }: AppProps) {
         images: [
           {
             url: 'https://dailyposts.vercel.app/absolutvision-WYd_PkCa1BY-unsplash.jpg',
-            width: 800,
-            height: 600,
             alt: 'news',
             type: 'image/jpeg',
           },
