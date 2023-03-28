@@ -18,7 +18,7 @@ function Search({ handler }: Props) {
         handler()
     }
     return (
-        <div className='fixed z-50 p-5 max-w-[98%] -translate-x-1/2 -translate-y-1/2 bg-white rounded-md shadow-md top-1/2 left-1/2 h-fit w-fit'>
+        <div className='fixed z-50 p-5 max-w-[98%] -translate-x-1/2 -translate-y-1/2 bg-white rounded-md shadow-md top-1/2 left-1/2 h-fit w-full'>
             <Close onClick={handler} sx={{
                 width: 20, height: 20
             }} className='absolute transition-transform duration-300 ease-in-out cursor-pointer top-2 right-2 text-primary hover:scale-110 focus:scale-110' />
