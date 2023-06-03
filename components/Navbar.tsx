@@ -1,12 +1,12 @@
 import Search from '@mui/icons-material/Search'
 import Image from 'next/image'
 import Link from 'next/link'
-import Subscription from './Subscription'
-import SearchBar from "./Search"
 import { useState } from 'react'
+import SearchBar from './Search'
+import Subscription from './Subscription'
 
 function Navbar() {
-  let [isSearchBarActive, setSearchBarActive] = useState(false);
+  let [isSearchBarActive, setSearchBarActive] = useState(false)
   let [isSubscribing, setSubscribing] = useState(false)
 
   const handleSearch = () => {
@@ -17,25 +17,39 @@ function Navbar() {
   }
   return (
     <>
-      {(isSearchBarActive || isSubscribing) && <div className='fixed top-0 left-0 z-40 w-screen h-screen bg-black/30'></div>}
+      {(isSearchBarActive || isSubscribing) && (
+        <div className="fixed top-0 left-0 z-40 h-screen w-screen bg-black/30"></div>
+      )}
       {isSubscribing && <Subscription handler={handleSubscribing} />}
       {isSearchBarActive && <SearchBar handler={handleSearch} />}
       <nav className="sticky top-0 z-40 w-full bg-white shadow-sm">
-        <div className='flex items-center justify-between px-5 py-3 md:px-10'>
+        <div className="flex items-center justify-between px-5 py-3 md:px-10">
           <Link href="/" passHref>
-            <a className='relative inline-block w-36 h-10'>
-              <Image src="/logo.svg" alt="daily uniben" layout='fill' />
-              <span className='text-xs relative top-5 text-primary -right-9 font-medium'>aily</span>
+            <a className="relative inline-block h-10 w-36">
+              <Image src="/logo.svg" alt="dixcovery" layout="fill" />
+              <span className="relative top-5 -right-9 text-xs font-medium text-primary">
+                ixcovery
+              </span>
             </a>
           </Link>
           <div className="flex items-center justify-between space-x-1 md:space-x-3">
-            <button className='flex items-center p-2 text-xs rounded w-fit md:bg-primary/10' onClick={handleSearch}>
-              <Search className='text-primary' sx={{
-                width: 20, height: 20
-              }} />
-              <span className='hidden font-medium opacity-60 md:inline-block'>search</span>
+            <button
+              className="flex w-fit items-center rounded p-2 text-xs md:bg-primary/10"
+              onClick={handleSearch}
+            >
+              <Search
+                className="text-primary"
+                sx={{
+                  width: 20,
+                  height: 20,
+                }}
+              />
             </button>
-            <button onClick={handleSubscribing} className="px-5 py-2 text-sm text-white transition-all duration-300 ease-in-out rounded bg-primary hover:bg-primary/90">Subscribe
+            <button
+              onClick={handleSubscribing}
+              className="rounded bg-primary px-5 py-2 text-sm text-white transition-all duration-300 ease-in-out hover:bg-primary/90"
+            >
+              Subscribe
             </button>
           </div>
         </div>
