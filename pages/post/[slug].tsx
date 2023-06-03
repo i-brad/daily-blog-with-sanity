@@ -127,8 +127,8 @@ function Single({ post, categories }: Props) {
                     _createdAt={post._createdAt}
                     _updatedAt={post._updatedAt}
                   />
-                  {!liking ? (
-                    <span className="flex items-center justify-between space-x-2">
+                  <span className="flex items-center justify-between space-x-2">
+                    {!liking ? (
                       <FavoriteBorderOutlined
                         sx={{
                           width: 20,
@@ -137,11 +137,11 @@ function Single({ post, categories }: Props) {
                         className="cursor-pointer text-primary transition-transform duration-300 ease-in-out hover:scale-125 focus:scale-125"
                         onClick={like}
                       />
-                      <span className="text-xs font-medium">{likes} likes</span>
-                    </span>
-                  ) : (
-                    <span className="block h-5 w-5 animate-pulse rounded-full bg-primary/50"></span>
-                  )}
+                    ) : (
+                      <span className="block h-5 w-5 animate-pulse rounded-full bg-primary/50"></span>
+                    )}
+                    <span className="text-xs font-medium">{likes} likes</span>
+                  </span>
                 </div>
                 <PortableText
                   dataset={process.env.NEXT_PUBLIC_SANITY_DATASET}

@@ -17,7 +17,7 @@ function Search({ handler }: Props) {
     handler()
   }
   return (
-    <div className="fixed top-1/2 left-1/2 z-50 h-44 w-full max-w-[98%] -translate-x-1/2 -translate-y-1/2 rounded-md bg-white p-5 shadow-md md:w-96 md:max-w-full lg:h-48 lg:w-[30rem]">
+    <div className="fixed top-1/2 left-1/2 z-50 h-44 w-full max-w-[98%] -translate-x-1/2 -translate-y-1/2 rounded-md bg-white p-5 shadow-md md:w-96 md:max-w-full lg:h-48 lg:w-[28rem]">
       <Close
         onClick={handler}
         sx={{
@@ -29,7 +29,7 @@ function Search({ handler }: Props) {
       <h1 className="border-b-2 border-primary pb-2 text-sm font-medium uppercase">
         Search for news
       </h1>
-      <p className="my-2 text-xs opacity-70">
+      <p className="mt-2 mb-5 text-xs opacity-70">
         Search through our site for news, topics and other interesting things
         happening around you.
       </p>
@@ -49,7 +49,7 @@ function Search({ handler }: Props) {
         </label>
         <button
           type="submit"
-          className="h-fit w-fit rounded-tr-md rounded-br-md bg-primary px-5 py-2 text-white transition-opacity duration-300 ease-in-out hover:bg-primary/90"
+          className="h-fit w-fit rounded-tr-md rounded-br-md bg-primary px-5 py-2 font-medium text-white transition-opacity duration-300 ease-in-out hover:bg-primary/90"
         >
           Search
         </button>
