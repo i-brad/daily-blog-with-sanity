@@ -22,7 +22,7 @@ function Category({ posts }: any) {
         ]}
       />
       <div className="relative p-5 md:px-10">
-        <p className="text-xs font-medium capitalize">
+        <p className="text-sm font-medium capitalize opacity-70">
           Category &gt; {params.query.category}
         </p>
         <div className="mt-5">
