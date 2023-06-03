@@ -19,7 +19,7 @@ interface Props {
 const Home = ({ posts, trends, categories }: Props) => {
   return (
     <div className="relative w-full max-w-7xl">
-      <div className="relative mt-5 flex w-full flex-col px-5 md:px-10 lg:flex-row lg:space-x-10">
+      <div className="relative mt-5 flex w-full flex-col-reverse px-5 md:px-10 lg:flex-row lg:space-x-10">
         <div className="mb-28 grid min-h-screen w-full grid-cols-1 place-items-start gap-10 sm:grid-cols-2 lg:max-w-6xl">
           {posts.map((post) => {
             return <Card key={post._id} data={post} />

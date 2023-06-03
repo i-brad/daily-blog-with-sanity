@@ -7,7 +7,7 @@ function Trend({ data }: any) {
   return (
     <Link href={`/post/${data.slug.current}`} passHref>
       <a className="flex items-center space-x-2 border-b border-primary pb-1 transition-transform duration-300 hover:scale-105">
-        <span className="relative block h-16 w-16">
+        <span className="relative block h-16 w-[4rem]">
           <Image
             src={urlFor(data.mainImage).url()}
             alt="trend"
@@ -17,9 +17,19 @@ function Trend({ data }: any) {
             objectFit="cover"
           />
         </span>
-        <div>
-          <h1 className="mb-1 text-sm font-medium">{data.title}</h1>
-          <p className="text-xs">{data.description}</p>
+        <div className="w-full flex-1 overflow-hidden">
+          <h2
+            className="mb-1 max-w-full overflow-hidden text-ellipsis whitespace-nowrap text-sm font-medium"
+            title={data.title}
+          >
+            {data.title}
+          </h2>
+          <p
+            className="block whitespace-normal text-xs"
+            title={data.description}
+          >
+            {data.description}
+          </p>
         </div>
       </a>
     </Link>
