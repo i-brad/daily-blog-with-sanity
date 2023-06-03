@@ -8,12 +8,9 @@ import { useState } from 'react'
 import { SubmitHandler, useForm } from 'react-hook-form'
 import PortableText from 'react-portable-text'
 import Footer from '../../components/Footer'
+import PostHeader from '../../components/PostHeader'
 import { sanityClient, urlFor } from '../../sanity'
 import { Post } from '../../typing'
-
-const PostHeader = dynamic(() => import('../../components/PostHeader'), {
-  ssr: false,
-})
 
 interface Props {
   post: Post
