@@ -1,8 +1,11 @@
 import { DefaultSeo } from 'next-seo'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
+import ReactGA from 'react-ga4'
 import Layout from '../components/Layout'
 import '../styles/globals.css'
+
+ReactGA.initialize(process.env.NEXT_PUBLIC_MEASUREMENT_ID as string)
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
