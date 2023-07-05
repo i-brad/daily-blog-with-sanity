@@ -34,13 +34,16 @@ function MyApp({ Component, pageProps }: AppProps) {
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <DefaultSeo
-        title="Dixcovery - News, tips, updates and more"
-        description="Get news ranging from different topics like, technology, design, hacks, business and more"
+        title="Everythingtech - News, tips, updates and more"
+        description="Discover the latest in cutting-edge technology and stay ahead of the game with our 
+        comprehensive tech website. Explore insightful articles, expert reviews, aand up-to-the-minute
+        news on gadgets, software, AI, and more. Unlock the power of innovation and fuel your curiosity with our trusted source for all things tech. Visist us now and elevate your tech knowledge
+        to new heights. Get news ranging from different topics like, technology, design, hacks, business and more .Get news ranging from different topics like, technology, design, hacks, business and more"
         canonical="https://dixcovery.vercel.app/"
         openGraph={{
           type: 'website',
-          site_name: 'Dixcovery',
-          url: 'https://dixcovery.vercel.app/',
+          site_name: 'Everythingtech',
+          url: 'https://everythingtech.com.ng',
           images: [
             {
               url: 'https://dixcovery.vercel.app/absolutvision-WYd_PkCa1BY-unsplash.jpg',
