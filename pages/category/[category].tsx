@@ -11,13 +11,16 @@ function Category({ posts }: any) {
   return (
     <div className="relative">
       <NextSeo
-        title={`Category - ${params.query.category?.toString()} | Dixcovery`}
-        description="Get news ranging from different topics like, technology, design, hacks, business and more"
+        title={`Category - ${params.query.category?.toString()} | Evertthingtech`}
+        description="Discover the latest in cutting-edge technology and stay ahead of the game with our 
+        comprehensive tech website. Explore insightful articles, expert reviews, aand up-to-the-minute
+        news on gadgets, software, AI, and more. Unlock the power of innovation and fuel your curiosity with our trusted source for all things tech. Visist us now and elevate your tech knowledge
+        to new heights. Get news ranging from different topics like, technology, design, hacks, business and more"
         canonical={`https://dixcovery.vercel.app/category/${params.query.category?.toString()}`}
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: `${params.query.category?.toString()}, news, blog, post, dixcovery post, dixcovery news, dixcovery, strike, nigeria news, news website`,
+            content: `${params.query.category?.toString()}, news, blog, post, everythingtech post, everythingtech news, everythingtech, strike, nigeria news, news website, tech`,
           },
         ]}
       />
