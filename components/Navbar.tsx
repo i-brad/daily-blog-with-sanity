@@ -26,9 +26,9 @@ function Navbar() {
         <div className="flex items-center justify-between px-5 py-3 md:px-10">
           <Link href="/" passHref>
             <a className="relative inline-block h-10 w-36">
-              <Image src="/logo.svg" alt="dixcovery" layout="fill" />
+              <Image src="/logo.svg" alt="everythingtech" layout="fill" />
               <span className="relative top-5 -right-9 text-xs font-medium text-primary">
-                ixcovery
+                verythingtech
               </span>
             </a>
           </Link>

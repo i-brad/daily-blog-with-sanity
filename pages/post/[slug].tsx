@@ -81,11 +81,11 @@ function Single({ post, categories }: Props) {
       <NextSeo
         title={post.title}
         description={post.description}
-        canonical={`https://dixcovery.vercel.app/post/${post.slug.current}`}
+        canonical={`https://everythingtech.com.ng/post/${post.slug.current}`}
         openGraph={{
           title: post.title,
           description: post.description,
-          url: `https://dixcovery.vercel.app/post/${post.slug.current}`,
+          url: `https://everythingtech.com.ng/post/${post.slug.current}`,
           type: 'article',
           article: {
             publishedTime: post._createdAt,
