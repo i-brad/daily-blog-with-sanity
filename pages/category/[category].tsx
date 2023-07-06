@@ -20,7 +20,7 @@ function Category({ posts }: any) {
         additionalMetaTags={[
           {
             name: 'keywords',
-            content: `${params.query.category?.toString()}, news, blog, post, everythingtech post, everythingtech news, everythingtech, strike, nigeria news, news website, tech`,
+            content: `${params.query.category?.toString()}, news, blog, post, everythingtech post, everythingtech news, everythingtech, strike, nigeria news, news website, tech, Technology news, Tech blog, Gadgets and devices, Software development, IT solutions, Tech industry updates, Artificial intelligence (AI), Cybersecurity, Mobile apps, Cloud computing, Internet of Things (IoT), Data analytics, Web development, Tech reviews, Tech tutorials, Tech trends, Tech events, Tech startups, Tech innovations, Digital transformation `,
           },
         ]}
       />
