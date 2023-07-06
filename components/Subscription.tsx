@@ -54,7 +54,7 @@ function Subscription({ handler }: any) {
             <label htmlFor="email_news" className="block w-full">
               <span className="text-sm">Email Address</span>
               <input
-                className="mt-2 block w-full rounded-tl-md rounded-bl-md bg-gray-200 px-3 py-2 outline-none"
+                className="mt-2 block w-full rounded-tl-md rounded-bl-md bg-gray-200 px-3 py-3 text-sm outline-none"
                 ref={emailRef}
                 type="email"
                 name="email"
@@ -65,7 +65,7 @@ function Subscription({ handler }: any) {
             </label>
             <button
               type="submit"
-              className="h-fit w-fit rounded-tr-md rounded-br-md bg-primary px-5 py-2 font-medium text-white transition-opacity duration-300 ease-in-out hover:bg-primary/90"
+              className="h-fit w-fit rounded-tr-md rounded-br-md bg-primary px-5 py-3 text-sm font-medium text-white transition-opacity duration-300 ease-in-out hover:bg-primary/90"
               disabled={submitting}
               style={{ opacity: submitting ? '.5' : '1' }}
             >

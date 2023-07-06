@@ -51,11 +51,10 @@ function MyApp({ Component, pageProps }: AppProps) {
               type: 'image/jpeg',
             },
           ],
-          description:
-            "Discover the latest in cutting-edge technology and stay ahead of the game with our 
+          description: `Discover the latest in cutting-edge technology and stay ahead of the game with our 
         comprehensive tech website Explore insightful articles expert reviews and up-to-the-minute
-        news on gadgets software AI and more Unlock the power of innovation and fuel your curiosity with our trusted source for all things tech Visist us now and elevate your tech knowledge
-        to new heights Get news ranging from different topics like technology design hacks business and more Get news ranging from different topics like technology design hacks business and more",
+        news on gadgets software AI and more Unlock the power of innovation and fuel your curiosity with our trusted source for all things tech Visit us now and elevate your tech knowledge
+        to new heights Get news ranging from different topics like technology design hacks business and more Get news ranging from different topics like technology design hacks business and more`,
         }}
         additionalMetaTags={[
           {

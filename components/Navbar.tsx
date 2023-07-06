@@ -25,10 +25,17 @@ function Navbar() {
       <nav className="sticky top-0 z-40 w-full bg-white shadow-sm">
         <div className="flex items-center justify-between px-5 py-3 md:px-10">
           <Link href="/" passHref>
-            <a className="relative inline-block h-10 w-36">
-              <Image src="/logo.svg" alt="everythingtech" layout="fill" />
-              <span className="relative top-5 -right-9 text-xs font-medium text-primary">
-                verythingtech
+            <a className="relative flex items-center">
+              <Image
+                src="/E-logo.png"
+                alt="everythingtech"
+                width={60}
+                height={40}
+                priority
+              />
+
+              <span className="relative text-sm font-medium text-primary">
+                Everythingtech
               </span>
             </a>
           </Link>
@@ -47,7 +54,7 @@ function Navbar() {
             </button>
             <button
               onClick={handleSubscribing}
-              className="rounded bg-primary px-5 py-2 text-sm text-white transition-all duration-300 ease-in-out hover:bg-primary/90"
+              className="rounded bg-primary px-6 py-3 text-xs text-white transition-all duration-300 ease-in-out hover:bg-primary/90"
             >
               Subscribe
             </button>

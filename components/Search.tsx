@@ -40,16 +40,16 @@ function Search({ handler }: Props) {
         <label htmlFor="search" className="block w-full">
           <input
             ref={ref}
-            className="block w-full rounded-tl-md rounded-bl-md bg-gray-200 px-3 py-2 outline-none"
+            className="block w-full rounded-tl-md rounded-bl-md bg-gray-200 px-3 py-3 text-sm outline-none"
             type="search"
             name="search"
             id="search"
-            placeholder="type to search"
+            placeholder="Search for an article..."
           />
         </label>
         <button
           type="submit"
-          className="h-fit w-fit rounded-tr-md rounded-br-md bg-primary px-5 py-2 font-medium text-white transition-opacity duration-300 ease-in-out hover:bg-primary/90"
+          className="h-fit w-fit rounded-tr-md rounded-br-md bg-primary px-5 py-3 text-sm font-medium text-white transition-opacity duration-300 ease-in-out hover:bg-primary/90"
         >
           Search
         </button>
