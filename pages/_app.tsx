@@ -46,7 +46,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           url: 'https://everythingtech.com.ng',
           images: [
             {
-              url: 'https://dixcovery.vercel.app/absolutvision-WYd_PkCa1BY-unsplash.jpg',
+              url: 'https://everythingtech.com.ng/absolutvision-WYd_PkCa1BY-unsplash.jpg',
               alt: 'news',
               type: 'image/jpeg',
             },
