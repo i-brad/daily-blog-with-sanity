@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         comprehensive tech website. Explore insightful articles, expert reviews, aand up-to-the-minute
         news on gadgets, software, AI, and more. Unlock the power of innovation and fuel your curiosity with our trusted source for all things tech. Visist us now and elevate your tech knowledge
         to new heights. Get news ranging from different topics like, technology, design, hacks, business and more .Get news ranging from different topics like, technology, design, hacks, business and more"
-        canonical="https://dixcovery.vercel.app/"
+        canonical="https://everythingtech.com.ng/"
         openGraph={{
           type: 'website',
           site_name: 'Everythingtech',
@@ -52,13 +52,16 @@ function MyApp({ Component, pageProps }: AppProps) {
             },
           ],
           description:
-            'Get news ranging from different topics like, technology, design, hacks, business and more',
+            "Discover the latest in cutting-edge technology and stay ahead of the game with our 
+        comprehensive tech website Explore insightful articles expert reviews and up-to-the-minute
+        news on gadgets software AI and more Unlock the power of innovation and fuel your curiosity with our trusted source for all things tech Visist us now and elevate your tech knowledge
+        to new heights Get news ranging from different topics like technology design hacks business and more Get news ranging from different topics like technology design hacks business and more",
         }}
         additionalMetaTags={[
           {
             name: 'keywords',
             content:
-              ' news, blog, posts, dixcovery post, dixcovery news, dixcovery, strike, nigeria news, news website, blog posts, discovery news, discovery',
+              ' Technology news, Tech blog, Gadgets and devices, Software development, IT solutions, Tech industry updates, Artificial intelligence (AI), Cybersecurity, Mobile apps, Cloud computing, Internet of Things (IoT), Data analytics, Web development, Tech reviews, Tech tutorials, Tech trends, Tech events, Tech startups, Tech innovations, Digital transformation ',
           },
         ]}
       />
