@@ -59,12 +59,12 @@ function Single({ post, categories }: Props) {
       body: JSON.stringify(data),
     })
       .then(() => {
-        console.log(data)
+        // console.log(data)
         setSubmitting(true)
         setSubmitted(true)
       })
       .catch((err) => {
-        console.error(err)
+        // console.error(err)
         setSubmitting(true)
         setSubmitted(false)
       })
@@ -346,7 +346,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
             name,
             image
         },
-        'comments': *[_type == "comment" && post._ref == ^._id && approved == true]{
+        'comments': *[_type == "comment" && post._ref == ^._id]{
             _id,
             name,
             comment,
