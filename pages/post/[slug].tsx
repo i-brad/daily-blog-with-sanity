@@ -118,7 +118,7 @@ function Single({ post, categories }: Props) {
             <div className="mx-auto w-full max-w-3xl space-y-8">
               <article className="w-full">
                 <h1 className="mb-5 text-2xl font-medium">{post.title}</h1>
-                <div className="my-5 flex items-center justify-between">
+                <div className="my-5 flex items-center justify-between space-x-5">
                   <PostHeader
                     author={post.author}
                     _createdAt={post._createdAt}
@@ -137,7 +137,11 @@ function Single({ post, categories }: Props) {
                     ) : (
                       <span className="block h-5 w-5 animate-pulse rounded-full bg-primary/50"></span>
                     )}
-                    <span className="text-xs font-medium">{likes} likes</span>
+                    {likes > 0 && (
+                      <span className="text-xs font-medium">
+                        {likes} like{likes > 1 ? 's' : ''}
+                      </span>
+                    )}
                   </span>
                 </div>
                 <PortableText
