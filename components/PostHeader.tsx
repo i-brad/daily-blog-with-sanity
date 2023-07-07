@@ -5,7 +5,7 @@ import { urlFor } from '../sanity'
 function PostHeader({ author, _createdAt, _updatedAt }: any) {
   return (
     <div className="flex items-start justify-start space-x-3">
-      <span className="relative block h-10 w-10 overflow-hidden rounded-full">
+      <span className="relative block h-10 min-w-[2.5rem] overflow-hidden rounded-full">
         <Image
           src={urlFor(author.image).url()}
           alt="author"
