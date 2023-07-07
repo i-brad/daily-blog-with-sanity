@@ -135,7 +135,7 @@ function Single({ post, categories }: Props) {
                         onClick={like}
                       />
                     ) : (
-                      <span className="block h-5 w-5 animate-pulse rounded-full bg-primary/50"></span>
+                      <span className="block h-4 w-4 animate-spin rounded-full border-2 border-primary border-r-transparent"></span>
                     )}
                     {likes > 0 && (
                       <span className="whitespace-nowrap text-xs font-medium">
