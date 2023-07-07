@@ -138,7 +138,7 @@ function Single({ post, categories }: Props) {
                       <span className="block h-5 w-5 animate-pulse rounded-full bg-primary/50"></span>
                     )}
                     {likes > 0 && (
-                      <span className="text-xs font-medium">
+                      <span className="whitespace-nowrap text-xs font-medium">
                         {likes} like{likes > 1 ? 's' : ''}
                       </span>
                     )}
