@@ -68,7 +68,7 @@ const Home = ({ posts, trends, categories }: Props) => {
 export default Home
 
 export const getServerSideProps = async () => {
-  const postQuery = `*[_type == "post"]{
+  const postQuery = `*[_type == "post"] | order(_createdAt desc){
     _id,
     title,
     categories[] -> {
@@ -84,7 +84,7 @@ export const getServerSideProps = async () => {
 
   const posts = await sanityClient.fetch(postQuery)
 
-  const trendQuery = `*[_type == "post" && likes >= 10]{
+  const trendQuery = `*[_type == "post" && likes >= 30]{
     _id,
     title,
     description,
