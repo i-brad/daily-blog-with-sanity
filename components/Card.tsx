@@ -11,7 +11,7 @@ function Card({ data }: any) {
     setLiking(true)
     fetch('/api/handle-like', {
       method: 'POST',
-      body: JSON.stringify({ _id: data._id }),
+      body: JSON.stringify({ _id: data?._id }),
     })
       .then((res) => res.json())
       .then((data) => {
@@ -32,7 +32,7 @@ function Card({ data }: any) {
       /> */}
       <span className="relative mx-auto block h-60 w-full duration-300 group-hover:scale-105">
         <Image
-          src={urlFor(data.mainImage).url()}
+          src={urlFor(data?.mainImage).url()}
           alt="thumbnail"
           loading="lazy"
           layout="fill"
@@ -41,19 +41,19 @@ function Card({ data }: any) {
         />
       </span>
       <h1 className="text-md border-y border-primary py-2 font-medium md:text-lg">
-        {data.title}
+        {data?.title}
       </h1>
-      <p className="my-3 text-xs">{data.description}</p>
+      <p className="my-3 text-xs">{data?.description}</p>
       <p className="my-2 w-fit space-x-2 text-xs font-medium opacity-50">
-        {data.categories.map((cat: any) => {
+        {data?.categories?.map((cat: any) => {
           return <span key={cat._id}>#{cat.title}</span>
         })}
       </p>
       <p className="text-xs font-medium opacity-70">
-        Created on {new Date(data._createdAt).toLocaleString()}
+        Created on {new Date(data?._createdAt).toLocaleString()}
       </p>
       <div className="mt-2 flex items-center justify-between">
-        <Link href={`/post/${data.slug.current}`} passHref>
+        <Link href={`/post/${data?.slug?.current}`} passHref>
           <a className="text-xs font-medium underline opacity-70 duration-300 hover:opacity-100">
             Read
           </a>
@@ -71,7 +71,11 @@ function Card({ data }: any) {
           ) : (
             <span className="block h-4 w-4 animate-spin rounded-full border-2 border-primary border-r-transparent"></span>
           )}
-          {likes > 0 && <span className="text-xs font-medium">{likes} like{likes > 1 ? "s" : ""}</span>}
+          {likes > 0 && (
+            <span className="text-xs font-medium">
+              {likes} like{likes > 1 ? 's' : ''}
+            </span>
+          )}
         </span>
       </div>
     </div>
